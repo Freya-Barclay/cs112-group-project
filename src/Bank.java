@@ -41,6 +41,14 @@ public class Bank {
 
     public void printAllSavingsAccounts() {
         for (String id : idList)
+            if (idAccountMap.containsKey(id)) {
+                BankAccount account = idAccountMap.get(id);
+                if (account instanceof SavingsAccount) {
+                    account.printDetails();
+                }
+            }
+    }
+}
 
 
             public void printAllCurrentAccounts() {
